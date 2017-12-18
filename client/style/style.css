@@ -1,0 +1,20 @@
+.podcast-entry {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.podcast-entry-title {
+  font-weight: bold;
+    color: #da89b9;
+}
+
+.podcast-entry-title:hover {
+  color: #2448c0;
+  cursor: pointer;
+}
+
+.podcast-entry-detail {
+  font-size: 12px;
+  color: #999;
+}
+
