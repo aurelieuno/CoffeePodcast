@@ -12,6 +12,17 @@ angular.module('podcast')
           console.log(err);
         });
     };
+    this.getAllP = function (callback) {
+      $http.get('/podcasts')
+        .then(function ({ data }) {
+          if (callback) {
+            callback(data);
+          }
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    };
   });
 
 
