@@ -23,6 +23,30 @@ angular.module('podcast')
           console.log(err);
         });
     };
+    this.deleteOneP = function (podcast, callback) {
+      $http.post('/deletePodcast', podcast)
+        .then(function ({ data }) {
+          if (callback) {
+            callback(data);
+          }
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
   });
 
 

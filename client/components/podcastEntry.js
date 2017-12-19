@@ -3,7 +3,6 @@ angular.module('podcast')
     templateUrl: 'templates/podcastEntry.html',
     bindings: {
       podcast: '<',
-      onClick: '<',
       onSave: '<'
     },
   });

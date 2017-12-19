@@ -1,4 +1,4 @@
-<li class="podcast-entry media">
+<li class="podcast-saved-entry">
   <div>
     <img src={{$ctrl.podcast.artwork_url}} />
   </div>
@@ -6,9 +6,11 @@
     <div class="podcast-entry-title">{{$ctrl.podcast.title}}</div>
     <div class="podcast-entry-detail">{{$ctrl.podcast.description}}</div>
     <div class="podcast-entry-detail">Duration: {{$ctrl.podcast.duration}}</div>
-    <p><a href= {{$ctrl.podcast.permalink_url}}>{{$ctrl.podcast.permalink_url}}</a></p>
-    <button class="btn" ng-click="$ctrl.onSave($ctrl.podcast)">
-        <span class="glyphicon glyphicon-save" style="color:rgb(230, 121, 172);"></span>
+    <p>
+      <a href={ {$ctrl.podcast.permalink_url}}>{{$ctrl.podcast.permalink_url}}</a>
+    </p>
+    <button class="btn" ng-click="$ctrl.onDelete($ctrl.podcast)">
+      <span class="glyphicon glyphicon-floppy-remove" style="color:rgb(230, 121, 172);"></span>
     </button>
   </div>
 

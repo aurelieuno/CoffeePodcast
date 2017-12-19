@@ -4,12 +4,11 @@ angular.module('podcast')
     templateUrl: 'templates/search.html',
     bindings: {
       result: '<',
-      provider: '<',
     },
  
-    controller: function() {
+    controller: function(SoundCloud) {
     this.onClick = (query) => {
-    this.provider.search(query, this.result);
+    SoundCloud.search(query, this.result);
   };
 }
 

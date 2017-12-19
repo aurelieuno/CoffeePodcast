@@ -51,6 +51,19 @@ app.get('/podcasts', (req, res) => {
     .catch(err => console.log(err))
 })
 
+app.post('/deletePodcast', (req, res) => {
+  let podcast = req.body;
+  Podcast.findOne(podcast)
+    .then(found => {
+      if (found) {
+        Podcast.remove(podcast)
+          .then(podcast => res.send(podcast))
+          .catch(err=> console.log(err))
+    }
+    })
+    .catch(err => console.log(err))
+
+})
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

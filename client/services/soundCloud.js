@@ -1,5 +1,5 @@
 angular.module('podcast')
-  .service('soundCloud', function ($http) {
+  .service('SoundCloud', function ($http) {
     // var id = '2f98992c40b8edf17423d93bda2e04ab';
     
     this.search = function (query, callback) {

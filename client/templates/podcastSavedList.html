@@ -1,0 +1,8 @@
+<ul class="podcast-saved-list">
+  <podcast-saved-entry
+  podcast = 'podcast'
+  ng-repeat= 'podcast in $ctrl.podcasts track by $index'
+  on-click= '$ctrl.onClick'
+  on-delete= '$ctrl.onDelete'
+  />
+</ul>

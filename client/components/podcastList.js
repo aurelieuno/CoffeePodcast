@@ -3,7 +3,6 @@ angular.module('podcast')
     templateUrl: 'templates/podcastList.html',
     bindings: {
       podcasts: '<',
-      onClick: '<'
     },
     controller: function (SavePodcast) {
       this.onSave = (podcast) => {
