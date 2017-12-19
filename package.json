@@ -4,8 +4,7 @@
   "description": "podcast finder",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
-    "postinstall": "bower install"
+    "start": "nodemon server/index.js"
   },
   "author": "",
   "license": "ISC",
