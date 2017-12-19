@@ -4,6 +4,6 @@ angular.module('podcast')
     bindings: {
       podcast: '<',
       onClick: '<',
-      onDelete: '<'
+      onDeletePodcast: '<'
     },
   });

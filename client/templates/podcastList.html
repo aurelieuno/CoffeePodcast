@@ -1,7 +1,10 @@
+<div>
+  <h3>Results of your Search</h3>
 <ul class="podcast-list">
   <podcast-entry
   podcast = 'podcast'
   ng-repeat= 'podcast in $ctrl.podcasts track by $index'
-  on-save= "$ctrl.onSave"
+  on-save-podcast= "$ctrl.onSavePodcast"
   />
 </ul>
+</div>

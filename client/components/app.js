@@ -10,17 +10,29 @@ angular.module('podcast')
       this.selectPodcast = (podcast) => {
         this.currentPodcast = podcast;
       };
-      this.searchResults = (datas) => {
-        this.podcasts = datas;
-        this.currentPodcast = datas[0];
-      };
-      this.savePodcasts = () => {
+      // this.searchResults = (datas) => {
+      //   this.podcasts = datas;
+      //   this.currentPodcast = datas[0];
+      // };
+      this.savePodcastList = () => {
         console.log('Fired')
         SavePodcast.getAllP(podcasts => this.savedpodcasts = podcasts)
       }
-      this.savePodcasts();
+      this.savePodcastList();
+      
+      this.onSavePodcast = (podcast) => {
+        SavePodcast.saveOneP(podcast, data => {
+          console.log(data);
+          this.savePodcastList();
+        })
+      }
 
- 
+      this.onDeletePodcast = (podcast) => {
+        SavePodcast.deleteOneP(podcast, data => {
+          console.log(data);
+          this.savePodcastList();
+        })
+      }
     }
   })  
 

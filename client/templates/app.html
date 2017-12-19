@@ -1,14 +1,17 @@
 <div id="app container">
+  <div class="col-md-5">
+    <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>
+  </div>
   <nav class="navbar">
     <div class="col-md-5">
       <search result='$ctrl.searchResults'></search>
     </div>
   </nav>
-    <div class="col-md-5">
-      <podcast-list podcasts='$ctrl.podcasts'></podcast-list>
-    </div>
-    <div class="col-md-5">
-      <podcast-saved-list podcasts='$ctrl.savedpodcasts' on-click='$ctrl.selectPodcast'></podcast-list>
+  <div class="col-md-5">
+    <podcast-list podcasts='$ctrl.podcasts' on-save-podcast='$ctrl.onSavePodcast'></podcast-list>
+  </div>
+  <div class="col-md-5">
+    <podcast-saved-list podcasts='$ctrl.savedpodcasts' on-click='$ctrl.selectPodcast' on-delete-podcast='$ctrl.onDeletePodcast'></podcast-list>
     </div>
     <div>
     </div>
