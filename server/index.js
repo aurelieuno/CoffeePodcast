@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3080;
 const db = require("../database/dbconfig.js")
 const dbpod = require("../database/models/podcast.js")
 const Podcast = require("../database/models/podcast.js")
