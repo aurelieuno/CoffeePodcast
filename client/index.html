@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
   <script src="index.js"></script>
   <script src="components/app.js"></script>
   <script src="components/search.js"></script>
@@ -23,6 +25,7 @@
   <script src="components/podcastSavedEntry.js"></script>
   <script src="components/podcastSavedList.js"></script>
   <script src="components/podcastPlay.js"></script>
+  <script src="components/login.js"></script>
   <script src="templates/app.html"></script>
   <script src="templates/search.html"></script>
   <script src="templates/podcastList.html"></script>
@@ -30,20 +33,31 @@
   <script src="templates/podcastSavedEntry.html"></script>
   <script src="templates/podcastSavedList.html"></script>
   <script src="templates/podcastPlay.html"></script>
+  <script src="templates/login.html"></script>
   <script src="services/soundCloud.js"></script>
   <script src="services/service.js"></script>
   <script src="config/config.js"></script>
   <script src="data/data.js"></script>
 </head>
 
-<body>
+<!-- <body>
+  <p>App</p>
+  <app ng-app="podcast">
+    <a ui-sref="main">Main</a>
+    <a ui-sref="login">Login</a>
+    <ui-view></ui-view>
+    </app>
+</body> -->
 
-<p>App</p>
-  <app ng-app="podcast"></app>
-
-  
 
 
+
+<body ng-app="podcast">
+  <a ui-sref="main">Main</a>
+  <a ui-sref="login">Login</a>
+  <ui-view></ui-view>
 </body>
+
+
 
 </html>
