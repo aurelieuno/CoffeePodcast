@@ -14,6 +14,11 @@ angular.module('podcast')
         this.podcasts = datas;
         this.currentPodcast = datas[0];
       };
+      this.savePodcasts = () => {
+        console.log('Fired')
+        SavePodcast.getAllP(podcasts => this.savedpodcasts = podcasts)
+      }
+      this.savePodcasts();
 
  
     }

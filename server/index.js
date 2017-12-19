@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
 app.post('/podcast', (req, res) => {
   let podcast = {
     title: req.body.title,
-    description: req.body.user.username,
-    image_url: req.body.artwork_url,
-    link_url: req.body.permalink_url,
+    description: req.body.description,
+    artwork_url: req.body.artwork_url,
+    permalink_url: req.body.permalink_url,
     duration: req.body.duration,
   }
   if (podcast) {

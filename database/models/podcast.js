@@ -6,8 +6,8 @@ var PodcastSchema = Schema(
   {
     title: { type: String },
     description: { type: String },
-    image_url: { type: String },
-    link_url: { type: String },
+    artwork_url: { type: String },
+    permalink_url: { type: String },
     duration: { type: Number },
     timestamp: { type: Date, default: Date.now },
     //users: [{ type: Schema.Types.ObjectId, ref: 'User' }]
