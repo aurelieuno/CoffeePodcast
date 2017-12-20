@@ -1,7 +1,7 @@
 angular.module('podcast')
   .component('app', {
     templateUrl: 'templates/app.html',
-    controller: function ($window, SavePodcast) {
+    controller: function AppCtrl($window, SavePodcast) {
 
       this.podcasts = $window.data;
       this.currentPodcast = $window.data[0];

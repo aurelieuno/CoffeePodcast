@@ -26,16 +26,10 @@
   <script src="components/podcastSavedList.js"></script>
   <script src="components/podcastPlay.js"></script>
   <script src="components/login.js"></script>
-  <script src="templates/app.html"></script>
-  <script src="templates/search.html"></script>
-  <script src="templates/podcastList.html"></script>
-  <script src="templates/podcastEntry.html"></script>
-  <script src="templates/podcastSavedEntry.html"></script>
-  <script src="templates/podcastSavedList.html"></script>
-  <script src="templates/podcastPlay.html"></script>
-  <script src="templates/login.html"></script>
+  <script src="components/signup.js"></script>
   <script src="services/soundCloud.js"></script>
-  <script src="services/service.js"></script>
+  <script src="services/servicePodcast.js"></script>
+  <script src="services/serviceUser.js"></script>
   <script src="config/config.js"></script>
   <script src="data/data.js"></script>
 </head>
@@ -55,6 +49,7 @@
 <body ng-app="podcast">
   <a ui-sref="main">Main</a>
   <a ui-sref="login">Login</a>
+  <a ui-sref="signup">SignUp</a>
   <ui-view></ui-view>
 </body>
 
