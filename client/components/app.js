@@ -15,26 +15,23 @@ angular.module('podcast')
         this.currentPodcast = datas[0];
       };
       this.savePodcastList = () => {
-        console.log('Fired')
-        SavePodcast.getAllP(podcasts => this.savedpodcasts = podcasts)
-      }
+        SavePodcast.getAllP(podcasts => this.savedpodcasts = podcasts);
+      };
       this.savePodcastList();
-      
+
       this.onSavePodcast = (podcast) => {
-        SavePodcast.saveOneP(podcast, data => {
-          console.log(data);
+        SavePodcast.saveOneP(podcast, (data) => {
           this.savePodcastList();
-        })
-      }
+        });
+      };
 
       this.onDeletePodcast = (podcast) => {
-        SavePodcast.deleteOneP(podcast, data => {
-          console.log(data);
+        SavePodcast.deleteOneP(podcast, (data) => {
           this.savePodcastList();
-        })
-      }
-    }
-  })  
+        });
+      };
+    },
+  });
 
 
 

@@ -4,29 +4,25 @@ angular.module('podcast')
     bindings: {
 
     },
-    controller: function (SaveUser, $scope, $state) {
+    controller(SaveUser, $scope, $state) {
 
       this.submit = () => {
-        let user = {
+        const user = {
           username: this.username,
-          password: this.password
-        }
+          password: this.password,
+        };
         console.log(user);
-        SaveUser.checkOneUser(user, data => {
-          if (data === "No Match") {
-            this.message = `Please SIGNUP, user ${this.username} does not exists or Wrong Password`
+        SaveUser.checkOneUser(user, (data) => {
+          console.log(data);
+          if (data === 'No Match') {
+            this.message = `Please SIGNUP, user ${this.username} does not exists`;
+          } else if (data === 'Password is not correct') {
+            this.message = `Wrong Password`;
           } else {
-            if (data === true) {
-              console.log(data)
-          
-                console.log("Fired")
-                $state.go('main');
-              
-              //go to main page
-            }
+            $state.go('main');
           }
         });
-      }
-    }
+      };
+    },
   });
 
