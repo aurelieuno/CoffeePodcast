@@ -3,34 +3,34 @@ angular.module('podcast')
 
     this.saveOneUser = function (user, callback) {
       $http.post('/user', user)
-        .then(function ({ data }) {
+        .then(({ data }) => {
           if (callback) {
             callback(data);
           }
         })
-        .catch(function (err) {
+        .catch((err) => {
           console.log(err);
         });
     };
     this.checkOneUser = function (user, callback) {
       $http.post('/checkuser', user)
-        .then(function ({ data }) {
+        .then(({ data }) => {
           if (callback) {
             callback(data);
           }
         })
-        .catch(function (err) {
+        .catch((err) => {
           console.log(err);
         });
     };
     this.getAllUsers = function (callback) {
       $http.get('/users')
-        .then(function ({ data }) {
+        .then(({ data }) => {
           if (callback) {
             callback(data);
           }
         })
-        .catch(function (err) {
+        .catch((err) => {
           console.log(err);
         });
     };
@@ -38,7 +38,7 @@ angular.module('podcast')
   });
 
 
-////////////////////////////TUTORIAL///////////////////////////////////////////////////////////////
+// //////////////////////////TUTORIAL///////////////////////////////////////////////////////////////
 // app.service('MyService', function () {
 //   this.sayHello = function () {
 //     console.log('hello');

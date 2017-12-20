@@ -13,8 +13,11 @@ angular.module('podcast')
         SaveUser.saveOneUser(user, (data) => {
           console.log(data);
           if (data === 'User Already Exists') {
-            this.message = `Please LOGIN, user ${this.username} already exists`;
+            //this.message = `Please LOGIN, user ${this.username} already exists`;
+            $state.go('login');
           } else {
+            window.user = data;
+            console.log(window.user)
             $state.go('main');
           }
         });

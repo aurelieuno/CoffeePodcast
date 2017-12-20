@@ -1,7 +1,13 @@
 <div id="app container">
-    <h2><span class="fa fa-coffee fa-lg" style="color:rgb(230, 121, 172);"></span> Welcome to Podcast App! </h2>
+    <h2 id="title"><span class="fa fa-coffee fa-lg" style="color:rgb(230, 121, 172);"></span> {{$ctrl.username}}, Welcome to Podcast App! </h2>
   <div class="col-md-5">
-    <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>
+    <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>  
+  </div>
+  <div class="col-md-5" id="friends">
+    <p>Your Friends!</p>
+    <ul>
+      <li ng-repeat='friend in $ctrl.friends track by $index'>{{friend}}</li> 
+    </ul>
   </div>
   <nav class="navbar">
     <div class="col-md-5">

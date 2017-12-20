@@ -19,6 +19,7 @@ angular.module('podcast')
           } else if (data === 'Password is not correct') {
             this.message = `Wrong Password`;
           } else {
+            window.user = data;
             $state.go('main');
           }
         });

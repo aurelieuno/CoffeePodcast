@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Podcast</title>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    io = io.connect()
+
+    // Emit ready event, and wait for acknowledgement.
+    io.emit('ready', { hey: 'window.user' }, function (data) {
+      alert(data.success)
+    })
+  </script>
+
+</head>
+
+
+<body>
+<h2>Podcast Coffee!</h2>
+</body>
+
+
+
+</html>

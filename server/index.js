@@ -1,26 +1,33 @@
-const express = require('express');
+const express = require('express.io')
+const app = express().http().io()
+
+//const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-
+const path = require("path");
 const PORT = process.env.PORT || 3000;
 const db = require('../database/dbconfig.js');
 const dbpod = require('../database/models/podcast.js');
 const Podcast = require('../database/models/podcast.js');
 const User = require('../database/models/user.js');
 
-const app = express();
+//const app = express();
 app.use(express.static(`${__dirname}/../client`));
 
-
+console.log(__dirname)
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
-
-
-app.get('/', (req, res) => {
-  res.send(index);
+app.get('/friends', function (req, res) {
+  res.sendfile(path.join(__dirname + '/index2.html'));
 });
+app.io.route('ready', function (req) {
+  req.io.respond({
+    success: 'Are you OK to share your podcasts with Lili?'
+  })
+})
+
 // ///////////////////////PODCAST////////////////////////////////////////////////
 app.post('/podcast', (req, res) => {
   const podcast = {
@@ -104,7 +111,7 @@ app.post('/checkuser', (req, res) => {
           } else {
             res.send('Password is not correct');
           }
-        });
+        })
       } else {
         res.send('No Match');
       }
@@ -118,6 +125,8 @@ app.get('/users', (req, res) => {
     .catch(err => console.log(err));
 });
 // ///////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });

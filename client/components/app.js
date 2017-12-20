@@ -1,18 +1,19 @@
 angular.module('podcast')
   .component('app', {
     templateUrl: 'templates/app.html',
-    controller: function AppCtrl($window, SavePodcast) {
+    controller: function AppCtrl($window, SavePodcast, SaveUser) {
 
       this.podcasts = $window.data;
       this.currentPodcast = $window.data[0];
       this.savedpodcasts = [];
+      this.username = $window.user;
+      this.friends = [];
 
       this.selectPodcast = (podcast) => {
         this.currentPodcast = podcast;
       };
       this.searchResults = (datas) => {
         this.podcasts = datas;
-        this.currentPodcast = datas[0];
       };
       this.savePodcastList = () => {
         SavePodcast.getAllP(podcasts => this.savedpodcasts = podcasts);
@@ -30,6 +31,16 @@ angular.module('podcast')
           this.savePodcastList();
         });
       };
+
+      this.getFriends = () => {
+        SaveUser.getAllUsers((friends) => {
+          let list = friends.map(friend => friend.username);
+          this.friends = list;
+        });
+      };
+      this.getFriends();
+
+
     },
   });
 
