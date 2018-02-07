@@ -7,6 +7,20 @@
   font-weight: bold;
     color: #da89b9;
 }
+#friends {
+    color: #301f8d;
+font-family: 'Gloria Hallelujah', cursive;
+
+}
+#title {
+    font-weight: bold;
+
+
+    color: #d82bc1;
+    font-size: 40px;
+
+
+}
 
 .podcast-entry-title:hover {
   color: #2448c0;

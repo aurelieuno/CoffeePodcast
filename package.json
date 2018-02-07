@@ -4,7 +4,8 @@
   "description": "podcast finder",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "postinstall": "bower install"
   },
   "author": "",
   "license": "ISC",
@@ -13,8 +14,11 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "bootstrap": "^3.3.7",
+    "coffee-script": "^1.12.7",
+    "connect": "^3.6.5",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "express.io": "^1.1.13",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "mongoose": "^4.13.7",

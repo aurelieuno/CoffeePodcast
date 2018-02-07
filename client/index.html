@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Podcast</title>
     <link rel="stylesheet" href="style/style.css">
+<link href="https://fonts.googleapis.com/css?family=Bungee|Gloria+Hallelujah" rel="stylesheet">
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -15,15 +16,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <script src="bower_components/angular/angular.js"></script>
-</head>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-<body>
-
-  <h2><span class="fa fa-coffee fa-lg"  style="color:rgb(230, 121, 172);"></span> Welcome to Podcast App! </h2>
-
-  <app ng-app="podcast"></app>
-
-  
   <script src="index.js"></script>
   <script src="components/app.js"></script>
   <script src="components/search.js"></script>
@@ -32,19 +26,34 @@
   <script src="components/podcastSavedEntry.js"></script>
   <script src="components/podcastSavedList.js"></script>
   <script src="components/podcastPlay.js"></script>
-  <script src="templates/app.html"></script>
-  <script src="templates/search.html"></script>
-  <script src="templates/podcastList.html"></script>
-  <script src="templates/podcastEntry.html"></script>
-  <script src="templates/podcastSavedEntry.html"></script>
-  <script src="templates/podcastSavedList.html"></script>
-  <script src="templates/podcastPlay.html"></script>
+  <script src="components/login.js"></script>
+  <script src="components/signup.js"></script>
   <script src="services/soundCloud.js"></script>
-  <script src="services/service.js"></script>
+  <script src="services/servicePodcast.js"></script>
+  <script src="services/serviceUser.js"></script>
   <script src="config/config.js"></script>
   <script src="data/data.js"></script>
+</head>
+
+<!-- <body>
+  <p>App</p>
+  <app ng-app="podcast">
+    <a ui-sref="main">Main</a>
+    <a ui-sref="login">Login</a>
+    <ui-view></ui-view>
+    </app>
+</body> -->
 
 
+
+
+<body ng-app="podcast">
+  <a ui-sref="main">Main</a>
+  <a ui-sref="login">Login</a>
+  <a ui-sref="signup">SignUp</a>
+  <ui-view></ui-view>
 </body>
+
+
 
 </html>
