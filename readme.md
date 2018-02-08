@@ -9,12 +9,10 @@
 ## Table of Contents
 
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
+2. [Requirements](#requirements)
+3. [Installing Dependencies](#installing-dependencies)
+4. [Tech Stack](#tech-stack)
+
 
 ## Usage
 
@@ -26,8 +24,6 @@
 - Node 
 - Angular 
 - MongoDB
-
-## Development
 
 ### Installing Dependencies
 
