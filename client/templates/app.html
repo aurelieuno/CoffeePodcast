@@ -1,18 +1,40 @@
-<div id="app container">
-    <h2><span class="fa fa-coffee fa-lg" style="color:rgb(230, 121, 172);"></span> Welcome to Podcast App! </h2>
-  <div class="col-md-5">
-    <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>
+<div class="container" id="app">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="mainTitle">
+        <span class="fa fa-coffee fa-lg" style="color:rgb(15, 15, 15);"></span>
+        COFFEE PODCAST
+        <span class="fa fa-coffee fa-lg" style="color:rgba(15, 15, 15, 0.856);"></span>
+      </h2>
+    </div>
   </div>
-  <nav class="navbar">
-    <div class="col-md-5">
-      <search result='$ctrl.searchResults'></search>
-    </div>
-  </nav>
-  <div class="col-md-5">
-    <podcast-list podcasts='$ctrl.podcasts' on-save-podcast='$ctrl.onSavePodcast'></podcast-list>
+    
+    <nav class="navbar">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <form class="search-form">
+            <div class="form-group form-inline">
+              <search result='$ctrl.searchResults'></search>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+      
+    </nav>
+  <div class="row">
+      <div class="col-md-12">
+        <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>
+      </div>
   </div>
-  <div class="col-md-5">
-    <podcast-saved-list podcasts='$ctrl.savedpodcasts' on-click='$ctrl.selectPodcast' on-delete-podcast='$ctrl.onDeletePodcast'></podcast-list>
-    </div>
-    <div>
-    </div>
+
+  <div class="row">
+      <div class="col-md-7">
+        <podcast-list podcasts='$ctrl.podcasts' on-save-podcast='$ctrl.onSavePodcast'></podcast-list>
+      </div>
+
+      <div class="col-md-5">
+        <podcast-saved-list podcasts='$ctrl.savedpodcasts' on-click='$ctrl.selectPodcast' on-delete-podcast='$ctrl.onDeletePodcast'></podcast-list>
+      </div>
+  </div>
+</div>
