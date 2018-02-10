@@ -3,6 +3,9 @@ angular.module('podcast')
     templateUrl: 'templates/podcastEntry.html',
     bindings: {
       podcast: '<',
-      onSavePodcast: '<'
+      onSavePodcast: '<',
+    },
+    controller() {
+      this.format = ms => `${Math.round(ms)} min`;
     },
   });

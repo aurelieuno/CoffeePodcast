@@ -5,16 +5,10 @@ angular.module('podcast')
     bindings: {
       result: '<',
     },
- 
-    controller: function(SoundCloud) {
-    this.onClick = (query) => {
-    SoundCloud.search(query, this.result);
-  };
-}
 
-
-
-
-
-
+    controller(SoundCloud) {
+      this.onClick = (query) => {
+        SoundCloud.search(query, this.result);
+      };
+    },
   });

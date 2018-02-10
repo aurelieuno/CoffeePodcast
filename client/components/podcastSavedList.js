@@ -4,13 +4,7 @@ angular.module('podcast')
     bindings: {
       podcasts: '<',
       onDeletePodcast: '<',
-      onClick: '<'
+      onClick: '<',
     },
-    // controller: function (SavePodcast) {
-    //   this.onDelete = (podcast) => {
-    //     SavePodcast.deleteOneP(podcast, data => console.log(data));
-    //   };
-    // }
-
   });
 

@@ -4,6 +4,11 @@ angular.module('podcast')
     bindings: {
       podcast: '<',
       onClick: '<',
-      onDeletePodcast: '<'
+      onDeletePodcast: '<',
+    },
+    controller() {
+      this.format = (ms) => {
+        return `${Math.round(ms)} min`;
+      };
     },
   });

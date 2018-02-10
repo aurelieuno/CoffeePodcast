@@ -8,33 +8,33 @@
       </h2>
     </div>
   </div>
-    
-    <nav class="navbar">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <form class="search-form">
-            <div class="form-group form-inline">
-              <search result='$ctrl.searchResults'></search>
-            </div>
-          </form>
-          
-        </div>
+
+  <nav class="navbar">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <form class="search-form">
+          <div class="form-group form-inline">
+            <search result='$ctrl.searchResults'></search>
+          </div>
+        </form>
+
       </div>
-      
-    </nav>
+    </div>
+
+  </nav>
   <div class="row">
-      <div class="col-md-12">
-        <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>
-      </div>
+    <div class="col-md-12">
+      <podcast-play podcast='$ctrl.currentPodcast'></podcast-play>
+    </div>
   </div>
 
   <div class="row">
-      <div class="col-md-6">
-        <podcast-list podcasts='$ctrl.podcasts' on-save-podcast='$ctrl.onSavePodcast'></podcast-list>
-      </div>
+    <div class="col-md-6">
+      <podcast-list podcasts='$ctrl.podcasts' on-save-podcast='$ctrl.onSavePodcast'></podcast-list>
+    </div>
 
-      <div class="col-md-6">
-        <podcast-saved-list podcasts='$ctrl.savedpodcasts' on-click='$ctrl.selectPodcast' on-delete-podcast='$ctrl.onDeletePodcast'></podcast-list>
-      </div>
+    <div class="col-md-6">
+      <podcast-saved-list podcasts='$ctrl.savedpodcasts' on-click='$ctrl.selectPodcast' on-delete-podcast='$ctrl.onDeletePodcast'></podcast-list>
+    </div>
   </div>
 </div>

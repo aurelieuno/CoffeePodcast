@@ -1,5 +1,24 @@
 <div>
-  <h4>Your PlayList</h4>
+  <h4 id="podcast-list-title">Your PlayList</h4>
+  <div class="row podcast-playlist">
+    <div class="col-md-2">
+      <img src={{$ctrl.podcast.artwork_url}} />
+    </div>
+    <div class="col-md-6">
+      <div class="podcast-entry-title">{{$ctrl.podcast.title}}</div>
+      <div class="podcast-entry-detail-link">
+        <a href={{$ctrl.podcast.permalink_url}}>Jump to {{$ctrl.podcast.title}}</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="col-md-6">
+        <div class="podcast-entry-title">{{$ctrl.podcast.title}}</div>
+        <div class="podcast-entry-detail">Duration: {{$ctrl.format($ctrl.podcast.duration /1000 / 60)}}</div>
+        <div class="podcast-entry-detail-link">
+          <a href={{$ctrl.podcast.permalink_url}}>Jump to {{$ctrl.podcast.title}}</a>
+        </div>
     <img src={{$ctrl.podcast.artwork_url}} />
-    <div class="podcast-entry-title">{{$ctrl.podcast.title}}</div>
+    <div class="podcast-entry-title">{{$ctrl.podcast.title}}</div> -->
 </div>

@@ -5,11 +5,5 @@ angular.module('podcast')
       podcasts: '<',
       onSavePodcast: '<',
     },
-    // controller: function (SavePodcast) {
-    //   this.onSave = (podcast) => {
-    //     SavePodcast.saveOneP(podcast, data => console.log(data));
-    //   };
-    // }
-
   });
 

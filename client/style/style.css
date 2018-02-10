@@ -4,14 +4,10 @@ body {
   padding-top: 2%;
   padding-left: 5%;
   padding-right: 5%;
-  border-radius: 5px;
 }
 
 .container {
-  /* background: #FFBB84; */
     background: url("/assets/tileable_wood_texture.png");
-    /* background: url("/assets/purty_wood.png"); */
-
 }
 
 .podcast-entry {
@@ -20,6 +16,17 @@ body {
   background: #fff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
   margin-bottom: 10px;
+  border-radius: 5px;
+}
+.podcast-playlist {
+  font-size: 12px;
+  padding: 8px;
+  background: rgb(97, 94, 94);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+  margin-bottom: 17px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 .podcast-entry img {
@@ -33,8 +40,14 @@ body {
 .podcast-entry-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: bold;
-  color: #da89b9;
+  color: #db63ab;
   font-size: 2.5em;
+  }
+#podcast-list-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: bold;
+  color: #0e0d0d;
+  font-size: 3.5em;
   }
 
 .podcast-entry-title:hover {
@@ -43,8 +56,15 @@ body {
 }
 
 .podcast-entry-detail {
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #999;
+  font-style: italic;
+}
+.podcast-entry-detail-link {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: rgb(28, 25, 54);
+  margin-bottom: 6px;
 }
 
 .navbar2 {

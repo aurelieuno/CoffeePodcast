@@ -1,13 +1,14 @@
-<li class="podcast-entry media">
+<li class="podcast-entry">
   <div class="row">
     <div class="col-md-4">
       <img src={{$ctrl.podcast.artwork_url}} />
     </div>
     <div class="col-md-6">
       <div class="podcast-entry-title">{{$ctrl.podcast.title}}</div>
-      <!-- <div class="podcast-entry-detail">{{$ctrl.podcast.description}}</div> -->
-      <div class="podcast-entry-detail">Duration: {{$ctrl.podcast.duration}}</div>
-      <p><a href= {{$ctrl.podcast.permalink_url}}>{{$ctrl.podcast.permalink_url}}</a></p>
+      <div class="podcast-entry-detail">Duration: {{$ctrl.format($ctrl.podcast.duration /1000 / 60)}}</div>
+      <div class="podcast-entry-detail-link">
+        <a href={{$ctrl.podcast.permalink_url}}>Jump to {{$ctrl.podcast.title}}</a>
+      </div>
       <button class="btn" ng-click="$ctrl.onSavePodcast($ctrl.podcast)">
           <span class="glyphicon glyphicon-save" style="color:rgb(230, 121, 172);"></span>
       </button>
